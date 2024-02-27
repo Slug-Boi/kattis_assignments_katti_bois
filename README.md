@@ -2,3 +2,12 @@
 This repo is meant for our APS course where we create kattis assignments as part of it
 
 WIP This problem is based on Thores lovely AddThreeNumbers example
+
+TODO:
+- [ ] Input Validator (make together)
+- [ ] Solutions (accepted)
+- [ ] Solutions (wrong answer)
+- [ ] More Secret Inputs
+- [ ] Maybe one more sample input
+- [ ] Finish the problem statement
+      
