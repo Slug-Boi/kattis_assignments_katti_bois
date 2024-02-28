@@ -1,11 +1,12 @@
 import java.util.Scanner;
 
-public class AddThree{
+public class AddThree {
     public static void main(String[] args) {
 	Scanner S = new Scanner(System.in);
-	int a = S.nextInt();
-	int b = S.nextInt();
-	int c = S.nextInt();
-	System.out.println(a + b + c);
+	String a = S.next();
+	String b = S.next();
+	String c = S.next();
+	String d = S.next();
+	System.out.println(a + b + c + d);
     }
 }
