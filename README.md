@@ -4,10 +4,10 @@ This repo is meant for our APS course where we create kattis assignments as part
 WIP This problem is based on Thores lovely AddThreeNumbers example
 
 TODO:
-- [ ] Input Validator (make together)
-- [ ] Solutions (accepted)
-- [ ] Solutions (wrong answer)
-- [ ] More Secret Inputs
-- [ ] Maybe one more sample input
-- [ ] Finish the problem statement
+- [x] Input Validator (make together)
+- [x] Solutions (accepted)
+- [x] Solutions (wrong answer)
+- [x] More Secret Inputs
+- [x] Maybe one more sample input
+- [x] Finish the problem statement
       
