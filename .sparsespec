@@ -1,0 +1,8 @@
+# Only the paths listed in the file will be downloaded when performing a
+# partial clone using `--filter=sparse:oid=shiny-app/.gitfilterspec`
+
+# Explicitly include filterspec needed to configure sparse checkout with
+# git config --local core.sparsecheckout true
+# git show master:snazzy-app/.gitfilterspec >> .git/info/sparse-checkout
+
+stringcon/
