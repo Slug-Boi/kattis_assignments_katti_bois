@@ -6,3 +6,4 @@
 # git show master:snazzy-app/.gitfilterspec >> .git/info/sparse-checkout
 
 stringcon/
+segment_trees/
