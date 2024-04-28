@@ -1,15 +1,23 @@
-\problemname{Concatenating Kitties}
-In the picturesque town of Purrington, a mischievous cat named Whiskers possessed an extraordinary talent for string concatenation. With a flick of his paw, Whiskers could seamlessly merge strings, creating a harmonious symphony of meows that enchanted the townsfolk.
+\problemname{Purrfect Tree}
+Once upon a time in a feline kingdom named Catville, there lived a wise old cat named Whiskers. Whiskers was not just any ordinary cat; he was the guardian of the mystical Segment Tree Forest. This forest was home to magical segment trees that held the secrets of Catville's prosperity.
+
+Each segment tree was a towering structure with branches that reached out like arms, embracing the land with their knowledge. The leaves of these trees were not green but shimmered in shades of silver and gold, representing the data values they held within.
+
+The cats of Catville often came to Whiskers with questions about the forest's data. Some wanted to know the maximum values within a specific range, Many wanted to know the multiplicative sums of specified ranges, while others sought to update the value of a particular leaf node. Whiskers, being the wise guardian, knew exactly how to handle these queries and updates using his magical segment tree powers.
+
+The tale of the Cat's Meow Segment Tree became a legendary story in Catville, reminding all the cats of the importance of understanding and respecting the power of data structures.
 {\setlength{\parindent}{0cm}
-Word of Whiskers' unique ability reached the renowned programmer, Professor Pawsington, who decided to celebrate the feline prodigy by organizing a coding competition. The challenge, known as "Concatenating Kitties," invited participants to write programs that could creatively concatenate Whiskers' meows. As the coding competition unfolded, the Concatenating Kitties challenge not only showcased the prowess of programmers but also brought a delightful fusion of whimsy and coding to the charming town of Purrington.
 }
 \begin{Input}
-The input consists of four strings $a$, $b$, $c$, $d$ with the length of strings being.
+The input starts with a line of two integers $N$, $O$
 {\setlength{\parindent}{0cm}
-$0 < a\leq 64$,
-$0 < b\leq 64$, 
-$0 < c\leq 64$ and
-$0 < d\leq 64$.
+$0 < N \leq 100 000$,
+$0 < O \leq 1 000 000$, 
+The next line contains $N$ integers $0 \geq a_i < 100$ representing the values of the starting array.  
+The next $O$ lines contain operations in the form:
+    - U $p$ $v$ where $0 \geq p < N$ and $0 \geq v < 100$ representing the update of the value at index $p$ to $v$.
+    - S $l$ $r$ where $0 \geq l < r \leq N$ representing the query of the sum of the values from index $l$ to $r$, being exclusive on $r$.
+    - M $l$ $r$ where $0 \geq l < r \leq N$ representing the query of the maximum value from index $l$ to $r$, being exclusive on $r$.
 }
 {\setlength{\parindent}{0cm}
 The inputs will not have leading 0's so 01 is not a valid input string.
@@ -17,4 +25,6 @@ The inputs will not have leading 0's so 01 is not a valid input string.
 \end{Input}
 
 \section*{Output}
-The professor is expecting a single a string with all the input strings put together with no spaces
+The output should contain the results of the queries in the order they were given. 
+{\setlength{\parindent}{0cm}
+}
