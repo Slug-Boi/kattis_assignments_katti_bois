@@ -1,3 +1,9 @@
+
+# This code is very heavily inspired by the following links
+# https://www.geeksforgeeks.org/iterative-segment-tree-range-maximum-query-with-node-update/?ref=lbp
+# https://www.geeksforgeeks.org/segment-tree-efficient-implementation/
+
+
 # limit for array size  
 N,O = map(int,input().split())
 # Max size of tree 
