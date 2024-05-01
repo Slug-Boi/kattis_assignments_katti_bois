@@ -1,7 +1,16 @@
 import random
+from sys import argv
 
-N = 10 # Length of starting array 0 < N <= 100_000
-O = 10 # Amount of operations 0 < O <= 1_000_000
+# Set the size of the input with permanent values:
+
+# Set the size of the input with arguments:
+args = argv
+if args:
+    N = int(argv[1])
+    O = int(argv[2])
+else:
+    N = 7 # Length of starting array 0 < N <= 100_000
+    O = 3 # Amount of operations 0 < O <= 1_000_000
 
 def CreateStartingArray():
     startingArray = []
@@ -33,8 +42,12 @@ def CreateOperation():
 
 if __name__ == "__main__":
     # Create input file
-    with open("input.in", "w") as file:
-        file.write(f"{N} {O}\n")
-        file.write(" ".join(CreateStartingArray()) + "\n")
-        for _ in range(O):
-            file.write(" ".join(CreateOperation()) + "\n")
+    # with open("input.in", "w") as file:
+    #     file.write(f"{N} {O}\n")
+    #     file.write(" ".join(CreateStartingArray()) + "\n")
+    #     for _ in range(O):
+    #         file.write(" ".join(CreateOperation()) + "\n")
+    print(f"{N} {O}")
+    print(" ".join(CreateStartingArray()))
+    for _ in range(O):
+        print(" ".join(CreateOperation()))
