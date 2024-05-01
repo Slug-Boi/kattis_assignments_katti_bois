@@ -3,7 +3,7 @@ import filecmp
 
 generator  = "segment_tree.py"
 solution1 = "group_sol.py"
-solution2 = "group_sol.py" # Add the name of the cpp binary
+solution2 = "<name of binary>" # Add the name of the cpp binary
 
 num_solutions = 10
 
