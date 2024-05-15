@@ -25,6 +25,12 @@ else:
     print("Not enough arguments!")
     quit()
 
+def cleanUp():
+    files = os.listdir(".")
+    for file in files:
+        if file[-4::] == ".ans":
+            os.remove(file)
+
 num_solutions = 10
 
 os.system("mkdir inputs")
@@ -41,4 +47,6 @@ for i in range(1, num_solutions+1):
             break
     os.system(f"mv {i}.in inputs/{i}.in")
     os.system(f"mv sol1[{i}].ans answers/{i}.ans")
+
+cleanUp()
 print("Done!")
