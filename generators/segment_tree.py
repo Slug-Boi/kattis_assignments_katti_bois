@@ -5,7 +5,7 @@ from sys import argv
 
 # Set the size of the input with arguments:
 args = argv
-if args:
+if len(args) > 1:
     N = int(argv[1])
     O = int(argv[2])
 else:
