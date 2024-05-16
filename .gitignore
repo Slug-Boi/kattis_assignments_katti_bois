@@ -2,3 +2,5 @@
 
 # Temporary work file for report
 ./segment_trees/report.tex
+
+*.class
