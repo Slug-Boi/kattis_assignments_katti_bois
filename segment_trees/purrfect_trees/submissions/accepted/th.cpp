@@ -102,6 +102,10 @@ int parser(char ch, int n1, int n2) {
 }
 
 int main() {
+      
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
     int N, O, x;
 
     cin >> N >> O;
@@ -126,7 +130,7 @@ int main() {
         int out = parser(ch, n1, n2);
 
         if (out != -1) {
-            cout << out << endl;
+            cout << out << '\n';
         }
     }
 
