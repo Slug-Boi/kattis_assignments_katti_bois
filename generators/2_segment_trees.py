@@ -105,6 +105,14 @@ def max_query(l,r):
       
     return res 
 
+def buildTrees(arr):
+    buildSumTree(arr)
+    buildMaxTree(arr)
+
+def updateTreesNode(p, value):
+    updateSumTreeNode(p, value)
+    updateMaxTreeNode(p, value)
+
 def parser(ch, n1, n2):
     match ch:
         case 'M':
@@ -112,8 +120,7 @@ def parser(ch, n1, n2):
         case 'S':
             print(sum_query(n1,n2))
         case 'U':
-            updateSumTreeNode(n1,n2)
-            updateMaxTreeNode(n1,n2)
+            updateTreesNode(n1, n2)
            
 a = list(map(int,input().split()))
 
@@ -121,8 +128,7 @@ a = list(map(int,input().split()))
 n = len(a)
 
 # build tree  
-buildSumTree(a)
-buildMaxTree(a)
+buildTrees(a)
 
 for _ in range(O):
     ch, n1, n2 = input().split()
