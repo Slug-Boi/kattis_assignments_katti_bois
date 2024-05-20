@@ -4,3 +4,7 @@
 *.tex
 
 *.class
+
+segment_trees/generators/answers
+segment_trees/generators/inputs
+
