@@ -1,16 +1,20 @@
 import random
 from sys import argv
 
-# Set the size of the input with permanent values:
-
 # Set the size of the input with arguments:
 args = argv
-if len(args) > 1:
+if len(args) == 3:
     N = int(argv[1])
     O = int(argv[2])
+    max_query_size = N
+elif len(args) == 4:
+    N = int(argv[1])
+    O = int(argv[2])
+    max_query_size = int(argv[3])
 else:
     N = 7  # Length of starting array 0 < N <= 100_000
     O = 3  # Amount of operations 0 < O <= 1_000_000
+    max_query_size = N
 
 
 def CreateStartingArray():
@@ -40,7 +44,11 @@ def CreateOperation():
     operation.append(str(random.randint(0, N-1)))
     # Add second index. Since this is strictly greater than the first
     # it will be between first index + 1 and N
-    operation.append(str(random.randint(int(operation[1])+1, N)))
+    if operation[0] == "M":
+        # Use max_query_size to bound the range that max queries are
+        operation.append(str(random.randint(int(operation[1])+1, min(int(operation[1])+1 + max_query_size, N))))
+    else:
+        operation.append(str(random.randint(int(operation[1])+1, N)))
     return operation
 
 
