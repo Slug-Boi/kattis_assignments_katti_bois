@@ -1,30 +1,39 @@
 #!/usr/bin/env bash
 
 # Generate test case
-# Usage: python generator.python
+# Iterations can only be set if left random 
+# Usage: python generator.python <iterations>
 #
 
 inc=0
 
+I=0
+
 if [[ -n $1 && -n $2 ]]; then
   N=$(($1))
   O=$(($2))
+  I=1
 else
    N=$((1 + $RANDOM % 100000))
-   O=$((1 + $RANDOM % 1000000))
+   O=$((1 + $RANDOM % 100000))
+   I=$1
 fi
+
+for i in $(seq 0 $(($I-1))); do
 
 tst=$(python generator.py $(($N)) $(($O)))
 
-echo "$tst" > "$inc".in
+echo "$tst" > inputs/"$inc".in
 
-out1=$(python 2_segment_trees.py < "$inc".in) 
-out2=$(python group_sol.py < "$inc".in)
+out1=$(python 2_segment_trees.py < inputs/"$inc".in) 
+out2=$(python group_sol.py < inputs/"$inc".in)
 
 if [ "$out1" == "$out2" ]; then
-    echo "Correct, printing output to $inc.ans"
-    echo "$out1" > "$inc".ans
+    echo "Correct, printing output to answers/$inc.ans"
+    echo "$out1" > answers/"$inc".ans
+    inc=$((inc+1))
 else 
     echo "Wrong answer"
 fi
 
+done
