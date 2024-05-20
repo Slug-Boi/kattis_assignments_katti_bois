@@ -1,9 +1,35 @@
 import random
+import sys
 
-bin_len = random.randint(4, 5000)
+# if first arg == 0 then genearate the worst case scenario
 
-number = random.getrandbits(bin_len)
 
-bin_num = format(number, '0b')
+def worst_case():
+    start = "1111111111111111111111111"
+    number = random_num_gen(4975)
 
-print(bin_num, end="")
+    full = number + start
+
+    print(full, end="")
+
+
+def random_num_gen(len):
+    arr = []
+    for i in range(len):
+        arr.append(str(random.randint(0, 1)))
+
+    return "".join(arr)
+
+
+if len(sys.argv) > 1:
+    if sys.argv[1] == "w":
+        worst_case()
+        exit()
+
+
+bin_len = random.randint(3, 5000)
+
+number = random_num_gen(bin_len)
+
+
+print(number, end="")
