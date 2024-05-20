@@ -69,7 +69,7 @@ while sys.stdin.readline():
             sys.exit(43)
     else:
         sys.exit(43)
-        
+# Check if amount of queries is the expected amount
 if O_actual != int(O):
     sys.exit(43)
 

@@ -1,1 +1,6 @@
 .vscode
+
+# Temporary work file for report
+*.tex
+
+*.class
