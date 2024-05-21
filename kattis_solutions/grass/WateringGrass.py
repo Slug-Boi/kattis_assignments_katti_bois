@@ -8,11 +8,10 @@ def findMin(sprinklers):
     hi = 0
     minS = 0
     
-    n = len(sprinklers)
     i = 0
     for count in range(l):
         currentMax = -1
-        while i < n and sprinklers[i][0] <= hi:
+        while i < len(sprinklers) and sprinklers[i][0] <= hi:
             if currentMax < sprinklers[i][1]:
                 currentMax = sprinklers[i][1]
             i += 1
