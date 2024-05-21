@@ -5,7 +5,7 @@ import sys
 
 
 def worst_case():
-    start = "011111111111111111111111"
+    start = "111111111111111111111110"
     number = random_num_gen(4975)
 
     full = start + number + "1"
