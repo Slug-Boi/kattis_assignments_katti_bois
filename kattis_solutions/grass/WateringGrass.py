@@ -39,7 +39,6 @@ for line in sys.stdin:
             
             # apppend the ring into the list with the range first so that it can be sorted by that
             # the left and right side are added so the range for each side is there
-            # sprinklerInfo.append(((rang),(ls),(rs)))
             sprinklerInfo.append((ls,rs))
             
         if n == 0:
