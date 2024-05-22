@@ -95,11 +95,6 @@ public class SegmentTree {
     }
 
     private static void parser(char ch, int n1, int n2) {
-        
-
-        // make a printstream that has autoFlush set to false
-        
-
         switch (ch) {
             case 'M':
                 out.println(maxQuery(n1, n2));
