@@ -13,7 +13,7 @@ elif len(args) == 4:
     max_query_size = int(argv[3])
 else:
     N = 7  # Length of starting array 0 < N <= 100_000
-    O = 3  # Amount of operations 0 < O <= 1_000_000
+    O = 3  # Amount of operations 0 < O <= 100_000
     max_query_size = N
 
 
