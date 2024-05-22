@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python3
 # This code is very heavily inspired by the following links
 # https://www.geeksforgeeks.org/iterative-segment-tree-range-maximum-query-with-node-update/?ref=lbp
 # https://www.geeksforgeeks.org/segment-tree-efficient-implementation/
@@ -114,13 +114,12 @@ def updateTreesNode(p, value):
     updateMaxTreeNode(p, value)
 
 def parser(ch, n1, n2):
-    match ch:
-        case 'M':
-            print(max_query(n1,n2))
-        case 'S':
-            print(sum_query(n1,n2))
-        case 'U':
-            updateTreesNode(n1, n2)
+    if ch == 'M':
+        print(max_query(n1,n2))
+    elif ch == 'S':
+        print(sum_query(n1,n2))
+    elif ch == 'U':
+        updateTreesNode(n1, n2)
            
 a = list(map(int,input().split()))
 

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # This solution doesn't propagate updates to a leaf node up through the tree
 # This results in wrong answers
 
@@ -82,13 +83,12 @@ def max_query(l,r):
     return res 
 
 def parser(ch, n1, n2):
-    match ch:
-        case 'M':
-            print(max_query(n1,n2))
-        case 'S':
-            print(sum_query(n1,n2))
-        case 'U':
-            updateTreeNode(n1,n2)
+    if ch == 'M':
+        print(max_query(n1,n2))
+    elif ch == 'S':
+        print(sum_query(n1,n2))
+    elif ch == 'U':
+        updateTreeNode(n1, n2)
  
            
 a = list(map(int,input().split()))

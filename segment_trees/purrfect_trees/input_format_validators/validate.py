@@ -47,9 +47,8 @@ for i in arr:
         
 ## QUERY CHECKS
 O_actual = 0
-
-while sys.stdin.readline():
-    line = sys.stdin.readline()
+line = sys.stdin.readline()
+while line:
     # Update the query count
     O_actual += 1
     
@@ -69,9 +68,10 @@ while sys.stdin.readline():
             sys.exit(43)
     else:
         sys.exit(43)
+    
+    line = sys.stdin.readline()
 # Check if amount of queries is the expected amount
 if O_actual != int(O):
     sys.exit(43)
-
 
 sys.exit(42)
