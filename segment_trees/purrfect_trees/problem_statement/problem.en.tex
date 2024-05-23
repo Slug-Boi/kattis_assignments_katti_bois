@@ -30,9 +30,9 @@ The next line contains $N$ integers $0 \leq a_i < 100$ representing the values o
 \newline
 The next $O$ lines contain operations in the form:
 \begin{itemize}
-    \item U $p$ $v$ where $0 \leq p < N$ and $0 \leq v < 100$ representing the update of the value at index $p$ to $v$.
-    \item S $l$ $r$ where $0 \leq l < r \leq N$ representing the query of the sum of the values from index $l$ to $r$, being exclusive on $r$.
-    \item M $l$ $r$ where $0 \leq l < r \leq N$ representing the query of the maximum value from index $l$ to $r$, being exclusive on $r$.
+    \item U $p$ $v$ where $0 \leq p < N$ and $0 \leq v < 100$ representing the update of the value at index $p$ to the value $v$.
+    \item S $l$ $r$ where $0 \leq l < r \leq N$ representing the query of the sum of the values from index $l$ to $r$, being inclusive on $l$ and exclusive on $r$.
+    \item M $l$ $r$ where $0 \leq l < r \leq N$ representing the query of the maximum value from index $l$ to $r$, being inclusive on $l$ and exclusive on $r$.
 \end{itemize}
 }
 {\setlength{\parindent}{0cm}
