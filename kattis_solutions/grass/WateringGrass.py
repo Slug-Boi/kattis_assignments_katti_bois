@@ -1,3 +1,4 @@
+# inspired by https://www.geeksforgeeks.org/minimum-sprinkers-required-to-be-turned-on-to-water-the-plants/
 import sys
 from math import sqrt
 
@@ -17,8 +18,10 @@ def findMin(sprinklers):
             i += 1
         minS += 1
         hi = currentMax
+        
         if hi >= l:
             return minS
+        
         elif hi == -1:
             return -1
 
