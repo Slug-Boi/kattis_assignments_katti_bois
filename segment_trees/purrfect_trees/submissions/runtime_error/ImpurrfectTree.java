@@ -1,11 +1,16 @@
-// This solution create a runtime error because the "tree" array gets initialised to be of size N instead of 2*N
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintStream;
 
-public class ImpurrfectTrees {
+public class ImpurrfectTree {
     private static int N, O;
     private static int n;
     private static int[] a;
     private static Node[] tree;
+    private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    private static PrintStream out = new PrintStream(System.out, false);
+
 
     // Internal Node class to hold sum and max values
     private static class Node {
@@ -92,10 +97,10 @@ public class ImpurrfectTrees {
     private static void parser(char ch, int n1, int n2) {
         switch (ch) {
             case 'M':
-                System.out.println(maxQuery(n1, n2));
+                out.println(maxQuery(n1, n2));
                 break;
             case 'S':
-                System.out.println(sumQuery(n1, n2));
+                out.println(sumQuery(n1, n2));
                 break;
             case 'U':
                 updateTreeNode(n1, n2);
@@ -103,30 +108,33 @@ public class ImpurrfectTrees {
         }
     }
 
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);  // Create a Scanner object
-        System.out.println();  
+    public static void main(String[] args) throws IOException { 
+        String[] startLine = br.readLine().split(" ");
 
-        N = scan.nextInt();
-        O = scan.nextInt();
-        System.err.println("N: " + N + "     O: " + O);
-        tree = new Node[N];
+        N = Integer.valueOf(startLine[0]);
+        O = Integer.valueOf(startLine[1]);
+
+        tree = new Node[N*2];
 
         // input for array elements
+        String[] arrayElem = br.readLine().split(" ");
         a = new int[N];
-        for (int i = 0; i < N; i++) {
-            a[i] = scan.nextInt();
-
+        int j = 0;
+        for (String str : arrayElem) {
+            a[j] = Integer.valueOf(str);
+            j++;
         }
+
         n = a.length;
-        System.err.println("n: " + n);
 
         build(a);
 
+
         for (int i = 0; i < O; i++) {
-            char ch = scan.next().charAt(0);
-            int sum = scan.nextInt();
-            int max = scan.nextInt();
+            String[] cmdElem = br.readLine().split(" ");
+            char ch = cmdElem[0].charAt(0);
+            int sum = Integer.valueOf(cmdElem[1]);
+            int max = Integer.valueOf(cmdElem[2]);
 
             parser(ch, sum, max);
         }
