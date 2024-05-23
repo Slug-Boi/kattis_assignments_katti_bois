@@ -1,3 +1,6 @@
 name: Purrfect Trees
 author: Theis Per Holm, Alexander Lolk, August Brandt
 license: public domain
+
+limits:
+  time_multiplier: 2
